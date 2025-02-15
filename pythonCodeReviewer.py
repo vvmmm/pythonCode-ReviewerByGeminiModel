@@ -3,7 +3,10 @@ import streamlit as st
 
 genai.configure(api_key="AIzaSyC1B3zDW4G19olwgTz368YgS-ZARqzsEFE")
 
-system_prompt="you are a python code reviewer. so you have to act as a reviewr to python code given you as an input.Youu have to generate output which shows the mistakes in a code and also generatae a correct code.If anyonw ask or pass anything other then python code then you have to reply them to pass only python code as an input."
+system_prompt="""you are a python code reviewer. so you have to act as a reviewr to python code given you as an input.Youu have to generate output which shows the mistakes in a code and also generatae a correct code.
+If anyonw ask or pass anything other then python code then you have to reply them to pass only python code as an input.
+and provide accurate bug reports and fixed code snippets.
+"""
 
 gemini=genai.GenerativeModel(model_name="models/gemini-2.0-flash-exp",system_instruction=system_prompt)
 
