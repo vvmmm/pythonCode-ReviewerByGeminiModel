@@ -51,7 +51,7 @@ jobs:
 
     - name: Run deployment command
       run: |
-        flet run  # Or whatever command you need to run for your project
+        flet run pythonCodeReviewer.py 
     - name: Setup Flutter ${{ env.FLUTTER_VERSION }}
       uses: subosito/flutter-action@v2
       with:
